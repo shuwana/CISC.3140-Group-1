@@ -1,3 +1,3 @@
-# Group-1
+# Whac-A-Prof
 _Simple overview of use/purpose._
 

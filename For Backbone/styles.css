@@ -1,0 +1,16 @@
+.grid {
+    display: flex;
+    width: 808px;
+    height: 808px;
+    flex-wrap: wrap;
+}
+
+.square {
+    width: 200px;
+    height: 200px;
+    border: solid black 1px;
+}
+
+.prof {
+    background-color: blue;
+}

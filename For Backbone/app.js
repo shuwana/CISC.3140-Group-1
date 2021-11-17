@@ -3,11 +3,13 @@ const profs = document.querySelector('.prof')
 const timeLeft = document.querySelector('#time-left')
 const score = document.querySelector('#score')
 
-const images=['../For Graphics/Prof Pics/chen2.png',
-            '../For Graphics/Prof Pics/Chuang2.png',
-            '../For Graphics/Prof Pics/Langsam1.png',
-            '../For Graphics/Prof Pics/Rudowsy1.png',
-            '../For Graphics/Prof Pics/Raphan1.png'];
+const images = [
+    '../For Graphics/Prof Pics/chen2.png',
+    '../For Graphics/Prof Pics/Chuang2.png',
+    '../For Graphics/Prof Pics/Langsam1.png',
+    '../For Graphics/Prof Pics/Rudowsy1.png',
+    '../For Graphics/Prof Pics/Raphan1.png',
+];
 
 let result = 0
 let hitPos
@@ -18,14 +20,12 @@ let timerId = null
 // Make profesor appear on different squares
 function randSquare() {
     squares.forEach(square => {
-        //square.classList.remove('prof')
         square.removeAttribute("style")
     })
 
     let randPosition = squares[Math.floor(Math.random() * 15)]
-    //randPosition.classList.add('prof')
-    let randomNum = Math.floor(Math.random()*images.length)
-    randPosition.style.backgroundImage = 'url("'+images[randomNum]+'")'
+    let randomNum = Math.floor(Math.random() * images.length)
+    randPosition.style.backgroundImage = 'url("' + images[randomNum] + '")'
     randPosition.style.backgroundRepeat = "no-repeat";
     randPosition.style.display = "block";
     randPosition.style.marginRight = "auto";

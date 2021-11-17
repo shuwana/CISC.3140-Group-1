@@ -1,7 +1,7 @@
 .grid {
     display: flex;
-    width: 808px;
-    height: 808px;
+    width: 1010px;
+    height: 1010px;
     flex-wrap: wrap;
 }
 
@@ -13,4 +13,9 @@
 
 .prof {
     background-color: blue;
+}
+
+.content {
+    max-width: 1010px;
+    margin: auto;
 }

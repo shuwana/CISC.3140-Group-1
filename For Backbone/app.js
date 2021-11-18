@@ -65,3 +65,11 @@ function countDown() {
 }
 
 let countDownTimerId = setInterval(countDown, 1000)
+
+// add scores whenever professor pops up and get a hit
+function wack(e){
+    if(!e.isTrusted) return; //add scores 
+    score++;
+    this.parentNode.classList.remove('up'); //this refers to item clicked
+    scoreBoard.textContent = score;
+}

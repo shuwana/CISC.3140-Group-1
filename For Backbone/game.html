@@ -9,6 +9,8 @@
 </head>
 
 <body class="content">
+    
+    
     <h1 style="text-align:center;"> Score </h1>
     <h2 style="text-align:center;" id="score"> 0 </h2>
     <h2 style="text-align:center;"> Time Left </h2>
@@ -42,10 +44,19 @@
         <div class="square" id="25"> </div>
     </div>
 
+
+    
     <button id="startGame" onclick="gameStartClicked()">Start</button>
+
+    <form method="get" action="leaderboard.html">
+        <input type="text" id="initials" placeholder="Enter 3 Initials"> 
+        <input type="submit" value="Submit">
+    </form>
+
     <div id="class"></div>
     <a href="index.html"><input type="button" value="Back to Home Page"></a>
 
+    
     <script src="app.js"> </script>
 </body>
 

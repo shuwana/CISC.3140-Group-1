@@ -11,6 +11,13 @@ const images = [
     '../For Graphics/Prof Pics/Raphan1.png',
 ];
 
+//music src
+const music = ['../For Graphics/Music Assets/Peculiar.mp3',
+            '../For Graphics/Music Assets/Pink Elephant.mp3']
+var myAudio = document.createElement("audio");
+myAudio.volume = 0.6
+var c=0
+
 let result =null
 let hitPos
 let currTime = null
@@ -83,7 +90,20 @@ function gameStart(){
     timeLeft.textContent = currTime
     randSquare()
     countDownTimerId=setInterval(countDown, 1000)
+
+    //play music
+    myAudio.src = music[c];
+    myAudio.play()
+    c++
+    myAudio.addEventListener('ended', ()=>{
+        myAudio.src = music[c];
+        myAudio.load()
+        myAudio.play()
+        c--
+    })
+
 }
+
 
 //create a restart button 
 function restartButton(){
@@ -114,7 +134,7 @@ function countDown() {
             square.removeAttribute("style")
         })
         alert("Game Over! Score: " + result)
-        
+        myAudio.pause()
     }
 }
 

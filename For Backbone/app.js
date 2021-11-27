@@ -34,13 +34,19 @@ function randSquare() {
     let mole = squares[randPosition]
    
     let randomNum = Math.floor(Math.random() * images.length)
-    randPosition.style.backgroundImage = 'url("' + images[randomNum] + '")'
-    randPosition.style.backgroundRepeat = "no-repeat";
-    randPosition.style.display = "block";
-    randPosition.style.marginRight = "auto";
-    randPosition.style.marginLeft = "auto";
-    randPosition.style.backgroundSize = "100%";
-    hitPos = randPosition.id
+    mole.style.backgroundImage = 'url("' + images[randomNum] + '")'
+    mole.style.backgroundRepeat = "no-repeat";
+    mole.style.display = "block";
+    mole.style.marginRight = "auto";
+    mole.style.marginLeft = "auto";
+    mole.style.backgroundSize = "100%";
+    hitPos = mole.id
+    
+    timerId=setTimeout(()=> {
+        mole.removeAttribute("style")
+        if (!timeUp){
+            randSquare()
+        }
     },time)
 }
 

@@ -16,17 +16,23 @@ let hitPos
 let currTime = null
 let timerId = null
 let countDownTimerId=null
-
+let timeUp = false
+let lastMole = null
 
 
 // Start off with a fresh board
 // Make profesor appear on different squares
 function randSquare() {
-    squares.forEach(square => {
-        square.removeAttribute("style")
-    })
 
-    let randPosition = squares[Math.floor(Math.random() * 15)]
+    const time = Math.floor(Math.random()*(1000-300)+300)
+
+    let randPosition = Math.floor(Math.random() * squares.length)
+    //avoid same location
+    while (randPosition===lastMole){
+        randPosition = Math.floor(Math.random() * squares.length)
+    }
+    let mole = squares[randPosition]
+   
     let randomNum = Math.floor(Math.random() * images.length)
     randPosition.style.backgroundImage = 'url("' + images[randomNum] + '")'
     randPosition.style.backgroundRepeat = "no-repeat";
@@ -35,12 +41,14 @@ function randSquare() {
     randPosition.style.marginLeft = "auto";
     randPosition.style.backgroundSize = "100%";
     hitPos = randPosition.id
+    },time)
 }
 
 // Check for a hit
 squares.forEach(square => {
     square.addEventListener('mousedown', () => {
         if (square.id == hitPos) {
+            square.removeAttribute("style")
             result++
             score.textContent = result
             hitPos = null
@@ -64,9 +72,10 @@ function gameStartClicked() {
 function gameStart(){
     result = 0
     currTime = 60
+    timeUp = false
     score.textContent = result
     timeLeft.textContent = currTime
-    timerId = setInterval(randSquare, 600)
+    randSquare()
     countDownTimerId=setInterval(countDown, 1000)
 }
 
@@ -81,6 +90,9 @@ function restartButton(){
 document.getElementById("class").addEventListener("click", function(){
     clearInterval(countDownTimerId)
     clearInterval(timerId)
+    squares.forEach(square => {
+        square.removeAttribute("style")
+    })
     gameStart()
 });
 
@@ -90,7 +102,7 @@ function countDown() {
     timeLeft.textContent = currTime
     if (currTime == 0) {
         clearInterval(countDownTimerId)
-        clearInterval(timerId)
+        timeUp = true
         //remove all
         squares.forEach(square => {
             square.removeAttribute("style")

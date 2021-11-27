@@ -1,17 +1,4 @@
-# For Backbone
-_Simple overview of use/purpose._
+# Backbone
 
-
-
-
-
-
-additional notes:
-
-I have created a semi-functional mole/pokemon game, in case you need to swap codes or designs or testing graphic size before finalize our group codes. The source codes can be found here. 
-https://github.com/WillSnakeTaka/knock-offPokeMole
-
-Here is the sample game site: (click music, then click start, the game ends when music ends): 
-https://fry.himitsuhimitsun.repl.co
-
-
+## This is the implementation of the Whac-a-Prof game.
+#### The game features a home page, game page, and a credits page. The game follows the same concept as the Whack a Mole game but as the name suggets, you whack professors instead of moles.

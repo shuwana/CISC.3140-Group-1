@@ -11,11 +11,12 @@
 <body class="content">
     
     
-    <h1 style="text-align:center;"> Score </h1>
-    <h2 style="text-align:center;" id="score"> 0 </h2>
-    <h2 style="text-align:center;"> Time Left </h2>
-    <h2 style="text-align:center;" id="time-left"> 60 </h2>
-
+    <h3 style="display:inline-block;"> Score: </h1>
+    <h3 style="display:inline-block;" id="score"> 0 </h2>
+    <h3 style="display:inline-block;"> | </h2>
+    <h3 style="display:inline-block;"> Time Left: </h2>
+    <h3 style="display:inline-block;" id="time-left"> 60 </h2>
+    
     <div class="grid">
         <div class="square" id="1"> </div>
         <div class="square" id="2"> </div>
@@ -44,14 +45,12 @@
         <div class="square" id="25"> </div>
     </div>
 
-
-    
-    <button id="startGame" onclick="gameStartClicked()">Start</button>
-    
     <form method="get" action="leaderboard.html">
         <input type="text" id="initials" placeholder="Enter 3 Initials"> 
         <input type="submit" value="Submit">
     </form>
+
+    <button id="startGame" onclick="gameStartClicked()">Start</button>
 
     <div id="class"></div>
     <a href="homepage.html"><input type="button" value="Back to Home Page"></a>

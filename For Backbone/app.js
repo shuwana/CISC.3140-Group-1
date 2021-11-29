@@ -92,14 +92,16 @@ function gameStart(){
     countDownTimerId=setInterval(countDown, 1000)
 
     //play music
+    myAudio.pause()
     myAudio.src = music[c];
     myAudio.play()
-    c++
+    c=1
     myAudio.addEventListener('ended', ()=>{
+        myAudio.pause()
         myAudio.src = music[c];
         myAudio.load()
         myAudio.play()
-        c--
+        c=0
     })
 
 }

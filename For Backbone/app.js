@@ -4,10 +4,10 @@ const timeLeft = document.querySelector('#time-left')
 const score = document.querySelector('#score')
 
 const images = [
-    '../For Graphics/Prof Pics/chen2.png',
-    '../For Graphics/Prof Pics/Chuang2.png',
+    '../For Graphics/Prof Pics/Chen200.png',
+    '../For Graphics/Prof Pics/Chuang200.png',
     '../For Graphics/Prof Pics/Langsam1.png',
-    '../For Graphics/Prof Pics/Rudowsy1.png',
+    '../For Graphics/Prof Pics/Rudowsy200.png',
     '../For Graphics/Prof Pics/Raphan1.png',
 ];
 

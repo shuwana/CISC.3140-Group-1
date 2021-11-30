@@ -9,6 +9,7 @@
     width: 200px;
     height: 200px;
     border: solid black 1px;
+    cursor:url('../For Graphics/Hammer Asset/hammer.cur'), auto; // added a hammer image from graphics when you hover over the grid in the wack-a-mole game.
 }
 
 .prof {

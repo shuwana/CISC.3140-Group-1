@@ -11,10 +11,16 @@ const images = [
     '../For Graphics/Prof Pics/Raphan1.png',
 ];
 
+//sound effect when pro got hit
+const sounds = ['../For Graphics/Music Assets/hit_impact_sound_one.mp3',
+                '../For Graphics/Music Assets/hit_impact_sound_two.mp3']
+//sound effect when pro got hit
+var s = document.createElement("audio")
+
 //music src
 const music = ['../For Graphics/Music Assets/Peculiar.mp3',
             '../For Graphics/Music Assets/Pink Elephant.mp3']
-var myAudio = document.createElement("audio");
+var myAudio = document.createElement("audio")
 myAudio.volume = 0.6
 var c=0
 
@@ -61,6 +67,8 @@ function randSquare() {
 squares.forEach(square => {
     square.addEventListener('mousedown', () => {
         if (square.id == hitPos) {
+            s.src = sounds[Math.floor(Math.random()*2)]
+            s.play()
             square.removeAttribute("style")
             result++
             score.textContent = result

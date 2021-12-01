@@ -1,3 +1,6 @@
+/* this is the css styles sheet,
+it changes the size, style, color of the display */
+
 .grid {
     display: flex;
     width: 1010px;

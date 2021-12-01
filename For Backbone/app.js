@@ -1,3 +1,5 @@
+// app.js adds square, prof pics, time, score on the screens, and link picutre files to the game.
+
 const squares = document.querySelectorAll('.square')
 const profs = document.querySelector('.prof')
 const timeLeft = document.querySelector('#time-left')

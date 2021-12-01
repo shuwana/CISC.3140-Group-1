@@ -11,8 +11,8 @@ it changes the size, style, color of the display */
 .square {
     width: 200px;
     height: 200px;
-    border: solid black 1px;
-    cursor:url('../For Graphics/Hammer Asset/hammer.cur'), auto; // added a hammer image from graphics when you hover over the grid in the wack-a-mole game.
+    border: solid rgb(223, 25, 25) 1px;
+    cursor:url('../For Graphics/Hammer Asset/hammer.cur'), auto; /* added a hammer image from graphics when you hover over the grid in the wack-a-mole game. */
 }
 
 .prof {
@@ -26,16 +26,16 @@ it changes the size, style, color of the display */
 
 
 html {
-    font-size: 36px;   // general html 
+    font-size: 36px;   /* general html */
 }
 audio { 
-   display:;        //add audio and can hide the video later 
+   display: ;        /*add audio and can hide the video later */
 }
 body {
     padding: 0;
     margin: 0;
     text-align: center;
-  background-image:url("  ");      // body and background, can add pic url from graphic team.
+  background-image:url("  ");      /* body and background, can add pic url from graphic team.*/
   background-size: cover;
   background-attachment: scroll;
   background-repeat: no-repeat;          

@@ -157,3 +157,5 @@ function wack(e){
     this.parentNode.classList.remove('up'); //this refers to item clicked
     scoreBoard.textContent = score;
 }
+
+

@@ -31,9 +31,8 @@ let hitPos
 let currTime = null
 let timerId = null
 let countDownTimerId=null
-let timeUp = false
 let lastMole = null
-
+let timeR = null
 
 // Start off with a fresh board
 // Make profesor appear on different squares
@@ -57,18 +56,16 @@ function randSquare() {
     mole.style.backgroundSize = "100%";
     hitPos = mole.id
     
-    timerId=setTimeout(()=> {
+    //random dispear time
+    timeR = setTimeout(()=> {
         mole.removeAttribute("style")
-        if (!timeUp){
-            randSquare()
-        }
     },time)
 }
 
 // Check for a hit
 squares.forEach(square => {
     square.addEventListener('mousedown', () => {
-        if (square.id == hitPos) {
+        if (square.id == hitPos && square.hasAttribute('style')) {
             s.src = sounds[Math.floor(Math.random()*2)]
             s.play()
             square.removeAttribute("style")
@@ -95,10 +92,9 @@ function gameStartClicked() {
 function gameStart(){
     result = 0
     currTime = 60
-    timeUp = false
     score.textContent = result
     timeLeft.textContent = currTime
-    randSquare()
+    timerId=setInterval(randSquare, 800)
     countDownTimerId=setInterval(countDown, 1000)
 
     //play music
@@ -120,7 +116,7 @@ function gameStart(){
 //create a restart button 
 function restartButton(){
     var btn = document.createElement("BUTTON")
-    btn.innerHTML = "Restart"
+    btn.setAttribute('id','restartButton')
     document.getElementById("class").append(btn);
 }
 
@@ -128,6 +124,7 @@ function restartButton(){
 document.getElementById("class").addEventListener("click", function(){
     clearInterval(countDownTimerId)
     clearInterval(timerId)
+    clearTimeout(timeR)
     squares.forEach(square => {
         square.removeAttribute("style")
     })
@@ -140,7 +137,7 @@ function countDown() {
     timeLeft.textContent = currTime
     if (currTime == 0) {
         clearInterval(countDownTimerId)
-        timeUp = true
+        clearTimeout(timerId)
         //remove all
         squares.forEach(square => {
             square.removeAttribute("style")
@@ -158,4 +155,7 @@ function wack(e){
     scoreBoard.textContent = score;
 }
 
-
+//when submit button clicked
+function submit(){
+    location.href = "leaderboard.html"
+}

@@ -13,6 +13,7 @@ it changes the size, style, color of the display */
     height: 200px;
     border: solid rgb(223, 25, 25) 1px;
     cursor:url('../For Graphics/Hammer Asset/hammer.cur'), auto; /* added a hammer image from graphics when you hover over the grid in the wack-a-mole game. */
+
 }
 
 .prof {
@@ -21,22 +22,97 @@ it changes the size, style, color of the display */
 
 .content {
     max-width: 1010px;
-    margin: auto;
+    margin: auto;   
 }
 
+/* background image of game page*/
+#gamePage {
+    background-image:url("../For Graphics/Background Asset/Background.png");      /* body and background, can add pic url from graphic team.*/
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: auto;
+    background-attachment: scroll;
+}
 
 html {
     font-size: 36px;   /* general html */
 }
-audio { 
-   display: ;        /*add audio and can hide the video later */
-}
+
 body {
     padding: 0;
     margin: 0;
-    text-align: center;
-  background-image:url("  ");      /* body and background, can add pic url from graphic team.*/
-  background-size: cover;
-  background-attachment: scroll;
-  background-repeat: no-repeat;          
+    text-align: center;      
+}
+
+/* start button*/
+#startGame{
+    background-image: url("../For Graphics/Button Assets/Start.png");
+    border: none;
+    height: 36px;
+    width: 72px;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    cursor: pointer;
+}
+
+/* back to home button in the game html*/
+.homeButton{
+    background-image: url("../For Graphics/Button Assets/Quit.png");
+    border: none;
+    padding: 5px;
+    height:35px;
+    width:75px;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    cursor: pointer;
+}
+
+/* restart button*/
+#restartButton{
+    background-image: url("../For Graphics/Button Assets/Restart-base.png");
+    border: none;
+    height: 36px;
+    width: 72px;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    cursor: pointer;
+}
+
+/*sumbit button*/
+#submitButton {
+    background-image: url("../For Graphics/Button Assets/Submit-base.png");
+    border: none;
+    padding: 5px;
+    height:36px;
+    width:72px;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    cursor: pointer;
+}
+
+/*input text field*/
+#initials{
+    padding: 5px 0px 5px 0px;
+    left: 50%;
+    top: 50%;
+    border: 2px solid gray;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border-radius: 2px;
+    background-color : #ffd6a2; 
+}
+
+/* background image for leaderboard
+  haven't apply to it*/
+.Leaderboard {
+    background-image: url("../For Graphics/Background\ Asset/LeaderBoard");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    background-attachment: scroll;
+}
+
+.button {
+    width:200px;
+    height:100px;
 }

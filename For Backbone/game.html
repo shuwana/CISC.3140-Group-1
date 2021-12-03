@@ -12,7 +12,7 @@ stored for leaderboard comparisions -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="content">
+<body class="content" id="gamePage">
     
     
     <h3 style="display:inline-block;"> Score: </h1>
@@ -51,13 +51,14 @@ stored for leaderboard comparisions -->
 <!--leader board links and prompt table-->
     <form method="get" action="leaderboard.html">
         <input type="text" id="initials" placeholder="Enter 3 Initials"> 
-        <input type="submit" value="Submit">
+        <br>
+        <input id="submitButton" type="submit" value="" onclick="submit()">
     </form>
 
-    <button id="startGame" onclick="gameStartClicked()">Start</button>
+    <button id="startGame" onclick="gameStartClicked()"></button>
 
     <div id="class"></div>
-    <a href="homepage.html"><input type="button" value="Back to Home Page"></a>
+    <a href="homepage.html"><input class="homeButton" type="button"></a>
 
     
     <script src="app.js"> </script>

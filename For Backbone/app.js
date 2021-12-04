@@ -46,6 +46,7 @@ function randSquare() {
         randPosition = Math.floor(Math.random() * squares.length)
     }
     let mole = squares[randPosition]
+    lastMole = randPosition;
    
     let randomNum = Math.floor(Math.random() * images.length)
     mole.style.backgroundImage = 'url("' + images[randomNum] + '")'
@@ -94,7 +95,7 @@ function gameStart(){
     currTime = 60
     score.textContent = result
     timeLeft.textContent = currTime
-    timerId=setInterval(randSquare, 800)
+    timerId=setInterval(randSquare, 1000)
     countDownTimerId=setInterval(countDown, 1000)
 
     //play music
@@ -137,7 +138,8 @@ function countDown() {
     timeLeft.textContent = currTime
     if (currTime == 0) {
         clearInterval(countDownTimerId)
-        clearTimeout(timerId)
+        clearInterval(timerId)
+        clearTimeout(timeR)
         //remove all
         squares.forEach(square => {
             square.removeAttribute("style")

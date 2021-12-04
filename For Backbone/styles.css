@@ -30,7 +30,7 @@ it changes the size, style, color of the display */
     background-image:url("../For Graphics/Background Asset/Background.png");      /* body and background, can add pic url from graphic team.*/
     background-repeat: no-repeat; 
     background-position: center;
-    background-size: auto;
+    background-size: 100%;
     background-attachment: scroll;
 }
 

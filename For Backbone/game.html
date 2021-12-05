@@ -13,54 +13,59 @@ stored for leaderboard comparisions -->
 </head>
 
 <body class="content" id="gamePage">
-    <h3 style="display:inline-block;"> Score: </h1>
-    <h3 style="display:inline-block;" id="score"> 0 </h2>
-    <h3 style="display:inline-block;"> | </h2>
-    <h3 style="display:inline-block;"> Time Left: </h2>
-    <h3 style="display:inline-block;" id="time-left"> 60 </h2>
-    
-    <div class="grid">
-        <div class="square" id="1"> </div>
-        <div class="square" id="2"> </div>
-        <div class="square" id="3"> </div>
-        <div class="square" id="4"> </div>
-        <div class="square" id="5"> </div>
-        <div class="square" id="6"> </div>
-        <div class="square" id="7"> </div>
-        <div class="square" id="8"> </div>
-        <div class="square" id="9"> </div>
-        <div class="square" id="10"> </div>
-        <div class="square" id="11"> </div>
-        <div class="square" id="12"> </div>
-        <div class="square" id="13"> </div>
-        <div class="square" id="14"> </div>
-        <div class="square" id="15"> </div>
-        <div class="square" id="16"> </div>
-        <div class="square" id="17"> </div>
-        <div class="square" id="18"> </div>
-        <div class="square" id="19"> </div>
-        <div class="square" id="20"> </div>
-        <div class="square" id="21"> </div>
-        <div class="square" id="22"> </div>
-        <div class="square" id="23"> </div>
-        <div class="square" id="24"> </div>
-        <div class="square" id="25"> </div>
-    </div>
+    <h3 style="display:inline-block;"> Score: </h3>
+    <h3 style="display:inline-block;" id="score"> 0 </h3>
+    <h3 style="display:inline-block;"> | </h3>
+    <h3 style="display:inline-block;"> Time Left: </h3>
+    <h3 style="display:inline-block;" id="time-left"> 60 </h3>
+        <div style="margin: 20px 0 20px 0;">
+            <input id="startGame" onclick="gameStartClicked()" type="button">
+        <a href="homepage.html"><input class="homeButton" type="button"></a>
+        </div>
+        <table class="grid">
+            <tbody>
+                <tr>
+                    <td class="square" id="1"> </td>
+                    <td class="square" id="2"> </td>
+                    <td class="square" id="3"> </td>
+                    <td class="square" id="4"> </td>
+                    <td class="square" id="5"> </td>
+                </tr>
+                <tr>
+                    <td class="square" id="6"> </td>
+                    <td class="square" id="7"> </td>
+                    <td class="square" id="8"> </td>
+                    <td class="square" id="9"> </td>
+                    <td class="square" id="10"> </td>
+                </tr>
+                <tr>
+                    <td class="square" id="11"> </td>
+                    <td class="square" id="12"> </td>
+                    <td class="square" id="13"> </td>
+                    <td class="square" id="14"> </td>
+                    <td class="square" id="15"> </td>
+                </tr>
+                <tr>
+                    <td class="square" id="16"> </td>
+                <td class="square" id="17"> </td>
+                <td class="square" id="18"> </td>
+                <td class="square" id="19"> </td>
+                <td class="square" id="20"> </td>
+                </tr>
+                <tr>
+                    <td class="square" id="21"> </td>
+                    <td class="square" id="22"> </td>
+                    <td class="square" id="23"> </td>
+                    <td class="square" id="24"> </td>
+                    <td class="square" id="25"> </div>
+                </tr>
+            </tbody>
 <!--leader board links and prompt table-->
     <!-- <form method="get" action="leaderboard.html">
         <input type="text" id="initials" placeholder="Enter 3 Initials"> 
         <br>
         <input id="submitButton" type="submit" value="" onclick="submit()">
     </form> -->
-
-    <br> </br>
-
-    <button id="startGame" onclick="gameStartClicked()"></button>
-
-    <div id="class"></div>
-    <a href="homepage.html"><input class="homeButton" type="button"></a>
-
-    
     <script src="app.js"> </script>
 </body>
 

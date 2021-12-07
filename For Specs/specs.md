@@ -115,16 +115,16 @@ For the product, specific event handling will be required. These events will be 
 ### Game Board  
 - Description: Background image to be displayed throughout the game. This can be reused between screens, swapping what is rendered ontop instead of changing both the foreground and background between screens.  
 - Stimulus: None.  
-Functional Requirements  
+- Functional Requirements  
     - Image: The game board should be an overhead view of a classroom.  
     - Spawn Cells: The game board should have specific cells where targets can pop up/disappear during the game. More specific details to be described in its own feature (See Mole Spawns feature).  
 ### Game Buttons
 - Description: Buttons available during the time of play. These will trigger specific actions/events for gameplay.  
 - Stimulus: User input (button clicks)  
-Functional Requirements  
-- Start Button: This will trigger the start of a game. Button should only be displayed when the user goes to the game screen and has not started a game. Additionally, it should be hidden during gameplay and after the game has ended.  
-- Quit Button: Triggers the end of a game and returns to the home screen. Button should be displayed at all times (before a game has started, during gameplay, and after). It should terminate the current ongoing game, reset the score/timer if changed, and return the user to the home screen.  
-- Reset Button: Triggers a new game. Button should only be displayed during a gameplay, as well as after a game has ended. It replaces the start button when consecutive games are played and should be hidden otherwise.  
+- Functional Requirements  
+    - Start Button: This will trigger the start of a game. Button should only be displayed when the user goes to the game screen and has not started a game. Additionally, it should be hidden during gameplay and after the game has ended.  
+    - Quit Button: Triggers the end of a game and returns to the home screen. Button should be displayed at all times (before a game has started, during gameplay, and after). It should terminate the current ongoing game, reset the score/timer if changed, and return the user to the home screen.  
+    - Reset Button: Triggers a new game. Button should only be displayed during a gameplay, as well as after a game has ended. It replaces the start button when consecutive games are played and should be hidden otherwise.  
 
 ### Target Spawns
 - Description: Specific areas where moles/targets may appear and disappear. The spawn timing should be randomized, as well as the target spawned.  

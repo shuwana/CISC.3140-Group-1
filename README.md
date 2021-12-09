@@ -16,4 +16,3 @@
 
 A online version of the classic arcade game, Whack a Mole. The same rules apply, that is, points are scored for each successful hit on a target. 
 
-[Live demo](). <!--Place the link to the live demo of the project.-->
